@@ -15,10 +15,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-@app.get("/")
-async def root():
-    return {"message": "Hello World"}
-
 @app.get("/test-short/")
 async def test_short():
     file_path = "tmp/data/test-short.json"

@@ -23,3 +23,8 @@ async def root():
 async def test_short():
     file_path = "tmp/data/test-short.json"
     return FileResponse(path=file_path, media_type="application/jdon", filename="test-short.json")
+
+@app.get("/test/")
+async def test_short():
+    file_path = "tmp/data/test.json"
+    return FileResponse(path=file_path, media_type="application/jdon", filename="test.json")

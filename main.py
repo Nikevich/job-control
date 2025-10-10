@@ -2,6 +2,9 @@ from fastapi import FastAPI
 from fastapi.responses import FileResponse
 from contextlib import asynccontextmanager
 from logger_config import setup_common_logger, setup_fastapi_loggers
+from startup import startup
+
+startup()
 
 # Настройка логирования
 setup_fastapi_loggers()
